@@ -1,0 +1,19 @@
+<!--to sync page setup from welcome page-->
+{% extends 'SuperHeroApp/welcome.html' %}
+
+
+{% block header%}
+    <h1>Superhero Application</h1>
+{% endblock header %}
+
+{% block content %}
+
+<!--form for superhero with submit button/routes to thank you page-->
+<form action="{% url 'thankyou' %}" method = "post">
+    {% csrf_token %}
+    <!--to show form-->
+    {{ superForm.as_p }}
+    <button>Submit</button>
+</form>
+
+{% endblock content %}

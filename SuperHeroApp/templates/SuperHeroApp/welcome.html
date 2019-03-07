@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<!--so page setup can extend to others-->
+{% block header %}
+
+<header>
+    <h1>Superhero Application</h1>
+</header>
+
+{% endblock header %}
+
+
+<!--so page setup can extend to others-->
+{% block content %}
+<p>Welcome future Vigilante!</p>
+<p>We would like you to join us in keeping our city safe.</p>
+<!--link to form page-->
+<p>To apply, enter <a href="{% url 'index' %}">here</a></p>
+
+
+{% endblock content %}
+
+<h1></h1>
+</body>
+</html>
